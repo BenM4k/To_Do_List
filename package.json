@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack --mode development",
+    "start": "webpack serve --open 'Firefox'"
   },
   "keywords": [],
   "author": "",
