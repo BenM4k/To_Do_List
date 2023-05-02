@@ -81,7 +81,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 ```sh
   cd my-folder
-  git clone https://github.com/BenM4k/AwesomeBooksProject.git
+  git clone https://github.com/BenM4k/To_Do_List.git
 ```
 
 
@@ -122,15 +122,13 @@ GitHub Pages
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
 👤 **Benedict Makomo**
 
 - GitHub: [@githubhandle](https://github.com/BenM4k)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/b%C3%A9n%C3%A9dict-makomo-885856248/)
 
-👤 **Nahid Raihan Sardar**
-- GitHub: [@githubhandle](https://github.com/Nahid1911)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
@@ -158,8 +156,6 @@ If you like this project, U can reach me on my Twitter handle for any collaborat
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse and all My Micronauts partners for their help on this project. 
-
-I would like to thank My coding partner Nahid Raihan Sardar for his work, professionalism and skills showcase.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
