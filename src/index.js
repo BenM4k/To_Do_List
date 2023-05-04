@@ -1,24 +1,14 @@
+import { addTask, deleteTask, editTask } from "./modules/operations.js";
 import './style.css';
 
-const tasks = [
-  {
-    description: 'task 1',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'task 2',
-    completed: false,
-    index: 1,
-  },
-];
+const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 function displayTask(task) {
-  const { description, completed } = task;
+  const { description, completed, index } = task;
   const currentTask = `
-    <li>
-        <input type="checkbox" ${completed}/>
-        <p>${description}</p>
+    <li class="${index}">
+        <input type="checkbox" data-index=${index} ${completed ? 'checked' : ''}/>
+        <p class="description" contenteditable="true">${description}</p>
         <span class="burger"></span>
     </li>
     `;
@@ -26,8 +16,39 @@ function displayTask(task) {
 }
 
 const container = document.querySelector('.container');
+const click = document.querySelector('.click');
+const add = document.querySelector('#add_text');
 
 for (let i = 0; i < tasks.length; i += 1) {
   const content = displayTask(tasks[i]);
   container.innerHTML += content;
 }
+
+click.addEventListener('click', (e) => {
+  e.preventDefault();
+  
+  if(add.value !== ""){
+    addTask(add.value, tasks);
+    window.location.reload();
+  }
+}
+)
+
+const burger = document.querySelectorAll('.burger');
+burger.forEach( burg => {
+  burg.addEventListener('click', () =>{
+    const list = burg.parentNode.className;
+    deleteTask(list, tasks);
+    window.location.reload();
+  })
+});
+
+const description = document.querySelectorAll('.description');
+description.forEach(desc => {
+  desc.addEventListener('input', () => {
+    const list = desc.parentNode.className;
+    const newDesc = desc.textContent;
+    editTask(list, newDesc, tasks);
+  })
+  console.log(desc.textContent)
+})
