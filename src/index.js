@@ -1,4 +1,4 @@
-import { addTask, deleteTask, editTask } from "./modules/operations.js";
+import { addTask, deleteTask, editTask } from './modules/operations.js';
 import './style.css';
 
 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -26,29 +26,27 @@ for (let i = 0; i < tasks.length; i += 1) {
 
 click.addEventListener('click', (e) => {
   e.preventDefault();
-  
-  if(add.value !== ""){
+
+  if (add.value !== '') {
     addTask(add.value, tasks);
     window.location.reload();
   }
-}
-)
+});
 
 const burger = document.querySelectorAll('.burger');
-burger.forEach( burg => {
-  burg.addEventListener('click', () =>{
+burger.forEach((burg) => {
+  burg.addEventListener('click', () => {
     const list = burg.parentNode.className;
     deleteTask(list, tasks);
     window.location.reload();
-  })
+  });
 });
 
 const description = document.querySelectorAll('.description');
-description.forEach(desc => {
+description.forEach((desc) => {
   desc.addEventListener('input', () => {
     const list = desc.parentNode.className;
     const newDesc = desc.textContent;
     editTask(list, newDesc, tasks);
-  })
-  console.log(desc.textContent)
-})
+  });
+});

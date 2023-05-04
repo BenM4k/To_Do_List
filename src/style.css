@@ -47,6 +47,7 @@ body {
   align-items: center;
   border-bottom: 1px solid rgb(207, 199, 199);
 }
+
 .form div #add_text {
   border: none;
   width: 100%;
@@ -86,7 +87,7 @@ body {
   gap: 15px;
 }
 
-.container li .description:focus{
+.container li .description:focus {
   outline: none;
 }
 
