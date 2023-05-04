@@ -1,6 +1,6 @@
 import { addTask, deleteTask, editTask } from './modules/operations.js';
 import { toggleChange, ClearAllCompleted } from './modules/checkbox.js';
-// import './style.css';
+import './style.css';
 
 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
