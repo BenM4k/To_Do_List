@@ -1,5 +1,6 @@
 import { addTask, deleteTask, editTask } from './modules/operations.js';
-import './style.css';
+import { toggleChange, ClearAllCompleted } from './modules/checkbox.js';
+// import './style.css';
 
 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
@@ -47,6 +48,20 @@ description.forEach((desc) => {
   desc.addEventListener('input', () => {
     const list = desc.parentNode.className;
     const newDesc = desc.textContent;
-    editTask(list, newDesc, tasks);
+    editTask(list - 1, newDesc, tasks);
   });
 });
+
+const checkboxes = document.querySelectorAll('.checkbox');
+checkboxes.forEach(checkbox =>{
+  let list = checkbox.parentNode.className;
+  checkbox.addEventListener('click', ()=>{
+    toggleChange(list - 1, tasks)
+  });
+})
+
+const clear = document.querySelector('.clear');
+clear.addEventListener('click', ()=>{
+  ClearAllCompleted(tasks);
+  window.location.reload();
+})
