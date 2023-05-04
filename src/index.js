@@ -7,7 +7,7 @@ function displayTask(task) {
   const { description, completed, index } = task;
   const currentTask = `
     <li class="${index}">
-        <input type="checkbox" data-index=${index} ${completed ? 'checked' : ''}/>
+        <input type="checkbox" class="checkbox" ${completed ? 'checked' : ''}/>
         <p class="description" contenteditable="true">${description}</p>
         <span class="burger"></span>
     </li>
