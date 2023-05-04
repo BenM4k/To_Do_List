@@ -53,15 +53,15 @@ description.forEach((desc) => {
 });
 
 const checkboxes = document.querySelectorAll('.checkbox');
-checkboxes.forEach(checkbox =>{
-  let list = checkbox.parentNode.className;
-  checkbox.addEventListener('click', ()=>{
-    toggleChange(list - 1, tasks)
+checkboxes.forEach((checkbox) => {
+  const list = checkbox.parentNode.className;
+  checkbox.addEventListener('click', () => {
+    toggleChange(list - 1, tasks);
   });
-})
+});
 
 const clear = document.querySelector('.clear');
-clear.addEventListener('click', ()=>{
+clear.addEventListener('click', () => {
   ClearAllCompleted(tasks);
   window.location.reload();
-})
+});
