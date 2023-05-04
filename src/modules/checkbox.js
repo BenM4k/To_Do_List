@@ -4,14 +4,6 @@ export function toggleChange(index, tasks){
 }
 
 export function ClearAllCompleted(tasks){
-    const temp = [];
-
-    for (let i = 0; i < tasks.length; i++) {
-        if (tasks[i].completed === true) {
-            temp.push(tasks[i]);
-        }
-    }
-
     const newTasks = tasks.filter(task => task.completed === false);
 
     for (let i = 0; i < newTasks.length; i++){
