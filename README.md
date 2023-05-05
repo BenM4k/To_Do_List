@@ -56,9 +56,11 @@ This project is a website that helps you organize your tasks during the day.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+- [Live Demo Link](https://benm4k.github.io/To_Do_List/dist/)
+
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
